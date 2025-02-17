@@ -260,7 +260,7 @@ extraEnvVars: []
 extraEnvVarsCM: ""
 ## @param extraEnvVarsSecret Name of existing Secret containing extra env vars
 ##
-extraEnvVarsSecret: ""
+extraEnvVarsSecret: "wordpress-s3-secret"
 ## @section WordPress Multisite Configuration parameters
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/wordpress#multisite-configuration
 ##
@@ -638,7 +638,7 @@ ingress:
   ingressClassName: ""
   ## @param ingress.hostname Default host for the ingress record. The hostname is templated and thus can contain other variable references.
   ##
-  hostname: 
+  hostname: ""
   ## @param ingress.path Default path for the ingress record
   ## NOTE: You may need to set this to '/*' in order to use this with ALB ingress controllers
   ##
@@ -1302,24 +1302,24 @@ mariadb:
 externalDatabase:
   ## @param externalDatabase.host External Database server host
   ##
-  host: localhost
+  host: ""
   ## @param externalDatabase.port External Database server port
   ##
   port: 3306
   ## @param externalDatabase.user External Database username
   ##
-  user: bn_wordpress
+  user: ""
   ## @param externalDatabase.password External Database user password
   ##
   password: ""
   ## @param externalDatabase.database External Database database name
   ##
-  database: bitnami_wordpress
+  database: ""
   ## @param externalDatabase.existingSecret The name of an existing secret with database credentials. Evaluated as a template
   ## NOTE: Must contain key `mariadb-password`
   ## NOTE: When it's set, the `externalDatabase.password` parameter is ignored
   ##
-  existingSecret: ""
+  existingSecret: "wordpress-rds-secret"
 ## Memcached chart configuration
 ## ref: https://github.com/bitnami/charts/blob/main/bitnami/memcached/values.yaml
 ##
