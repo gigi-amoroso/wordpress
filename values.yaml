@@ -1319,7 +1319,7 @@ externalDatabase:
   ## NOTE: Must contain key `mariadb-password`
   ## NOTE: When it's set, the `externalDatabase.password` parameter is ignored
   ##
-  existingSecret: "wordpress-rds-secret"
+  existingSecret: ""
 ## Memcached chart configuration
 ## ref: https://github.com/bitnami/charts/blob/main/bitnami/memcached/values.yaml
 ##
