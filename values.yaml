@@ -132,7 +132,7 @@ wordpressFirstName: FirstName
 wordpressLastName: LastName
 ## @param wordpressBlogName Blog name
 ##
-wordpressBlogName: Development
+wordpressBlogName: Production
 ## @param wordpressTablePrefix Prefix to use for WordPress database tables
 ##
 wordpressTablePrefix: wp_
